@@ -16,7 +16,7 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
-const mongoUri = process.env.MONGO_URI || 'mongodb+srv://User:N0%40password@cluster0.njo2l.mongodb.net/userDB?retryWrites=true&w=majority';
+const mongoUri = process.env.MONGO_URI;
 
 mongoose.connect(mongoUri)
   .then(() => console.log('✅ MongoDB connected'))
